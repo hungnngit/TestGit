@@ -1,0 +1,128 @@
+https://github.com/superzoro168/CameraPreviewAndTakePicture
+//note
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape>
+            <solid
+                android:color="#f3ae1b" />
+            <stroke
+                android:width="1dp"
+                android:color="#bb6008" />
+            <corners
+                android:radius="0dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#f3ae1b"
+                android:endColor="#bb6008"
+                android:angle="270" />
+            <stroke
+                android:width="1dp"
+                android:color="#bb6008" />
+            <corners
+                android:radius="0dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+</selector>
+
+----------->
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <shape>
+            <solid
+                android:color="#aa0000" />
+            <stroke
+                android:width="1dp"
+                android:color="#ff0000" />
+            <corners
+                android:radius="7dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#ff0000"
+                android:endColor="#ff0000"
+                android:angle="270" />
+            <stroke
+                android:width="1dp"
+                android:color="#ff0000" />
+            <corners
+                android:radius="7dp" />
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+        </shape>
+    </item>
+</selector>
+
+--->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.screenbegin.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/imgbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ffff" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/keyword"
+            android:src="@drawable/camera" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/hello_world" />
+
+    <RelativeLayout
+        android:id="@+id/cancel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#00ffff" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:background="#00ffff"
+            android:text="@string/tv_btn_cancel" />
+    </RelativeLayout>
+
+</RelativeLayout>
