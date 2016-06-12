@@ -4,6 +4,29 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:uiOptions="splitActionBarWhenNarrow">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".SampleAlarmReceiver"></receiver>
+        
+        <receiver android:name=".SampleBootReceiver"
+                android:enabled="false">
+            <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+        <service android:name=".SampleSchedulingService" />
+    </application>
+
+</manifest>
+
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
